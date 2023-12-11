@@ -49,3 +49,9 @@ jobs:
           files: |
             dist/*
           generate_release_notes: true
+
+      - name: Build wheel
+        run: poetry build
+        with:
+          files: |
+            dist/*
