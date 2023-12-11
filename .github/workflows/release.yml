@@ -43,12 +43,11 @@ jobs:
       #----------------------------------------------
       # Generate new release
       #----------------------------------------------
+      - name: Build wheel
+        run: poetry build
       - name: Create release
         uses: softprops/action-gh-release@v0.1.14
         with:
           files: |
             dist/*
           generate_release_notes: true
-
-      - name: Build wheel
-        run: poetry build
