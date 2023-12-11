@@ -52,6 +52,3 @@ jobs:
 
       - name: Build wheel
         run: poetry build
-        with:
-          files: |
-            dist/*
